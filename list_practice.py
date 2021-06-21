@@ -34,3 +34,40 @@ cities.pop(3)
 cities.remove("Atlanta")
 del cities[5] # think the instructions are wrong about using clear() as that clears the entire list 
 print(cities)
+
+print("function practice below")
+#function practice
+
+def printCities():
+    for city in cities:
+        print(city)
+
+printCities()
+
+
+def printLongCities():
+    for i in range(1, len(cities)):
+        if len(cities[i]) > len(cities[i-1]):
+            print(cities[i] + "12")
+
+printLongCities()
+
+print(cities) 
+
+def shortCities():
+    for i in range(0, len(cities)-1):
+        if(len(cities[i]) > len(cities[i+1])):
+            cities.append(cities[i+1])
+            cities.pop(i+1)
+    return cities
+
+print(shortCities())
+
+
+def sumArray():
+    sum = 0
+    for num in numbers:
+        sum += num
+    return sum
+
+print(sumArray())
