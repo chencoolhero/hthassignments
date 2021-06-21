@@ -4,7 +4,7 @@ b = [2, 5, 6, 7, 2, 75, 34, 76, 23]
 def closestSum(target):
     index1 = 0
     index2 = 0
-    difference = 10000000000000
+    difference = abs(target - (a[0]+b[0]))
     for i in range(0, len(a)):
         for j in range(0, len(b)):
             if abs(target - (a[i] + b[j])) < difference:
